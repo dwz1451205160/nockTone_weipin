@@ -40,8 +40,7 @@ var fdj = (function(){
             }
             $showBox.onmouseenter = function() {
                 $bigImg.style.opacity = 0;
-                // var x = this.offsetLeft,
-                // y = this.offsetTop;
+                
                 $showBox.onmousemove = function(e) {
                     e = e || window.event;
                     var left = e.pageX - this.offsetLeft - $filter.offsetWidth/2,
@@ -49,8 +48,7 @@ var fdj = (function(){
                     //获取最大值
                     var maxLeft = this.clientWidth - $filter.offsetWidth;
                     var maxTop = this.clientHeight - $filter.offsetHeight;
-                    // var largestImgLeft = -2.857*left;
-                    // var largestImgTop = -2.857*top;
+                    
                     if(left <= 0){
                         left = 0;
 

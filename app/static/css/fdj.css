@@ -84,8 +84,114 @@
     max-height: 100%;
     
 }
-
-
 .img-box>li.active {
     border: 1px solid #f20e86;
+}
+.fdj_middle .fdj_midb{
+    height: 46px;
+    width: 420px;
+    box-sizing: border-box;
+    padding: 13px 0px;
+    border-bottom: 1px dashed #e2e2e2;
+    /* background: #f20e86; */
+    position: relative;
+    top: 4px;
+    left: -1px;
+}
+.fdj_midb p{
+    display: inline;
+    color: #999999;
+}
+.fdj_midb .shoucang_icon{
+    display: inline-block;
+    height: 15px;
+    width: 16px;
+    background: url(../images/fdj_icon.png) no-repeat;
+    background-position: -543px -150px;
+    vertical-align: middle;
+}
+.fdj_midb .shoucang{
+    color: #999999;
+    cursor: pointer;
+}
+.fdj_midb .shoucang:hover{
+    color: #f20e86;
+}
+.fdj_midb .share{
+    display: inline-block;
+    width: 93px;
+    height: 22px;
+    border: 1px solid #c2c2c2;
+    line-height: 22px;
+    box-sizing: border-box;
+    padding: 0 4px;
+}
+.share:hover{
+    border-bottom-color: #ffffff;
+    
+}
+.share>i{
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    background: url(../images/fdj_icon2.png) no-repeat;
+    background-position: -16px -19px;
+}
+.share p{
+    color: #000000;
+}
+.share>span{
+    display:inline-block;
+    width: 8px;
+    height: 5px;
+    background: url(../images/fdj_icon4.png) no-repeat;
+    background-position: -43px -206px;
+}
+.share:hover>span{
+    background: url(../images/fdj_icon4.png) no-repeat;
+    background-position: -15px -205px;
+}
+.share .share_app{
+    /* display: inline-block; */
+    width: 126px;
+    height: 28px;
+    position: absolute;
+    border: 1px solid #c2c2c2;
+    left: 202px;
+    top: 36px;
+    display: none;
+    box-sizing: border-box;
+    padding-top: 2px;
+    
+}
+.share:hover .share_app{
+    display: block;
+    z-index: -1;
+   
+}
+.share_app li{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+.share_app li:nth-child(1){
+    background: url(../images/share_icon.png) no-repeat;
+    background-position: -30px 0;
+   
+}
+.share_app li:nth-child(2){
+    background: url(../images/share_icon.png) no-repeat;
+    background-position: -240px 0;
+   
+}
+.share_app li:nth-child(3){
+    background: url(../images/share_icon.png) no-repeat;
+    background-position: -210px 0;
+   
+}
+.share_app li:nth-child(4){
+    background: url(../images/share_icon.png) no-repeat;
+    background-position: 0 0;
+   
 }
