@@ -1,0 +1,91 @@
+#header{
+    width: 1366px;
+    height: 192px;
+    background: pink;
+}
+/* 放大镜主体内容开始 */
+.content{
+	width: 1000px;
+	margin: 0 auto;
+}
+#fdj_wrapper{
+    height:734px;
+}
+.fdj{
+    height: 734px;
+}
+.fdj .fdj_top{
+    height: 40px;
+    line-height: 40px;
+}
+/* .fdj_middle .fdj_box{
+    
+} */
+.show_img{
+    width: 420px;
+    height: 420px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    cursor: crosshair;
+}
+.show_img img {
+    opacity: 1;
+
+}
+.show_img .filter{
+    width: 147px;
+    height: 147px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    /* background: rgba(0, 0, 0, 0.6); */
+    cursor: crosshair;
+}
+.largest_img {
+    position: absolute;
+    left: 175px;
+    top: 232px;
+    width: 420px;
+    height: 420px;
+    overflow: hidden;
+    display: block;
+    z-index: -1;
+    
+}
+.largest_img img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+
+.img-box {
+    position: relative;
+    top: 7px;
+    left: -3px;
+    
+
+}
+.img-box li{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}
+.img-box>li {
+    border: 1px solid transparent;
+}
+
+.img-box>li img {
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+
+.img-box>li.active {
+    border: 1px solid #f20e86;
+}
