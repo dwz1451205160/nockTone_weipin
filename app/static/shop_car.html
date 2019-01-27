@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fdj.css">
+        
 </head>
 <body>
     <div id="header"></div>
@@ -56,10 +57,9 @@
                 </div>
                 <!-- 右部分 -->
                 <div class="fdj_middle_right">
+                    <span id="clock"></span>
                     <!-- <p>OTHER MIX</p>
-                    <span>剩余：
-
-                    </span>
+                    
                     <h2>七格格</h2>
                     <p>白搭单品 透气不闷脚</p>
                     <h1>￥69</h1>
@@ -93,7 +93,15 @@
     </div>
     <script src="js/promise_ajax.js"></script>
     <script src="js/shop_info.js"></script>
+    <script src="js/clock.js"></script>
+    <script>
+        var $clock = document.querySelector('#clock');
+       
+        getClock('2019/2/25 18:46:00',$clock);
+    </script>
     <script src="js/faj.js"></script>
+   
+    
 
 </body>
 </html>

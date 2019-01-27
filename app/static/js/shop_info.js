@@ -66,24 +66,36 @@ var shopList = (function () {
             var $div = document.createElement('div');
             var str = `
             <div id=${data.id}>
-            <p>${data.brand}</p>
-            <span>剩余：
-
-            </span>
-            <h2>${data.tradename}</h2>
-            <p>白搭单品 透气不闷脚</p>
-            <h1>￥${data.price}</h1>
+            <p class="brand">${data.brand}</p>
+            <h2 class="trade_name">${data.tradename}</h2>
+            <p class="trade_ps">白搭单品 透气不闷脚</p>
+            <h1 class="price"><span>￥</span>${data.price}</h1>
             <dl>
-                <dt>配送</dt>
-                <dd>深圳市</dd>
+                <dt class="peisong">配送</dt>
+                <dd class="address">
+                    <select>
+                        <option>深圳市 龙华区 民乐新村 20号</option>
+                        <option>北京</option>
+                    </select>
+                </dd>
             </dl>
-            <dl>
+            <dl class="yunfei">
                 <dt>运费</dt>
-                <dd>￥10</dd>
+                <dd>
+                    <span>￥10</span>
+                    <span>（订单满288免运费）</span>
+                </dd>
             </dl>
-            <dl>
+            <dl class="size">
                 <dt>尺码</dt>
-                <dd>${data.size}</dd>
+                <dd>${data.size}
+                    <div>
+                        <ul>
+                            <li>规格：均码</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </dd>
             </dl>
 
             <dl>
@@ -98,8 +110,8 @@ var shopList = (function () {
             </div>
             `
             arr.push(str);
-            $shopBox.innerHTML = arr.join('');
-
+            $div.innerHTML = arr.join('');
+            $shopBox.appendChild($div);
             this.buttonall = document.querySelectorAll('button');
             console.log(this.buttonall);
 

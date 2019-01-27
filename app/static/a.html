@@ -5,8 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>初始页面</title>
+    <style>
+        span{
+            display: block;
+            width: 200px;
+            height: 50px;
+            background: palegreen;
+        }
+    </style>
 </head>
 <body>
-    
+    <span></span>
+    <script>
+        function getClock(targetDate){
+            var $span = document.querySelector('span');
+            console.log($span);
+            //目标日期字符串到格林尼治时间的毫秒数
+            targetDate = Date.parse(targetDate);
+            
+            var timer = setInterval(_ => {
+            //当前时间到格林尼治时间的毫秒数
+            var nowDate = Date.now();
+            var secondDifference = parseInt(Math.abs(targetDate - nowDate)/1000);
+            var second = secondDifference % 60;
+            var minute = Math.floor(secondDifference / 60) % 60;
+            var hour = Math.floor(secondDifference / 60 / 60) % 24;
+            var day = Math.floor(secondDifference / 60 / 60 / 24);
+            $span.innerHTML = `剩余${day}天${hour}时${minute}分${second}秒`
+            },1000)
+        
+        }
+        
+        
+        getClock('2019/1/28 18:46:00');
+        
+    </script>
 </body>
 </html>
