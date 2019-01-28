@@ -153,6 +153,7 @@
     height: 5px;
     background: url(../images/fdj_icon4.png) no-repeat;
     background-position: -43px -206px;
+    margin-bottom: 2px;
 }
 .share:hover>span{
     background: url(../images/fdj_icon4.png) no-repeat;
@@ -291,6 +292,7 @@
     height:30px;
     cursor: pointer;
     position: absolute;
+    border: none;
     left: 0px;
 }
 .yunfei{
@@ -338,5 +340,138 @@
     text-align: center;
     line-height: 26px;
     float: left;
-
+    cursor: pointer;
+}
+.size dd .fit{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 17px;
+    height: 16px;
+    background: url(../images/fdj_icon.png) no-repeat;
+    background-position: -500px -150px;
+}
+.size .select_size{
+    width: 378px;
+    height: 48px;
+    background: #fff;
+    position: absolute;
+    right: -156px;
+    top: 38px;    
+    display: none;
+    cursor: pointer;
+    border: 1px solid #dbdada;
+    border-radius: 2px;
+    box-shadow: 0 0 3px rgba(0,0,0,.1);
+    color: #4d4d4d;
+}
+.size dd:hover .select_size{
+    display: block;
+    z-index: 100;
+}
+.select_size .lingxing{
+    width: 376px;
+    height: 10px;
+    position: relative;
+    top: -10px;
+}
+.lingxing i:nth-child(1){
+    width: 14px;
+    height: 14px;
+    text-shadow: 0 0 4px rgba(0,0,0,.15);
+    color: #dbdada;
+    font: 400 12px/14px \5B8B\4F53,Hiragino Sans GB;
+    position: absolute;
+    top: 3px;
+    text-align: left;
+}
+.lingxing i:nth-child(2){
+    position: absolute;
+    width: 14px;
+    text-align: left;
+    height: 14px;
+    font: 400 12px/14px \5B8B\4F53,Hiragino Sans GB;
+    color: #fff;
+    top: 5px;
+}
+.select_size ul{
+    width: 339px;
+    height: 25px;
+    background: #f5f5f5;
+    margin-left: 20px;
+    display: flex;
+}
+.select_size ul li{
+    display: inline-block;
+    
+}
+.select_size ul li:nth-child(1){
+    width: 139px;
+    height: 25px;
+    border-right: 2px solid #fff;
+    text-align: left;
+}
+.count_dl{
+    padding: 11px 10px;
+    position: relative;
+    height: 30px;
+    margin: -1px 0 0 -10px;
+    padding-bottom: 10px;
+}
+.count_dl dt{
+    float: left;
+    font-size: 12px;
+    width: 40px;
+    text-align: left;
+    color: #999;
+    line-height: 32px;
+}
+.count_dl dd{
+    justify-content: space-between;
+    height: 28px;
+    width: 73px;
+    border: 1px solid #b3b3b3;
+    display: flex;
+    text-align: center;
+    line-height: 28px;
+}
+.count_dl dd span{
+    display: inline-block;
+    width: 30px;
+    height: 28px;
+    font-weight: 400;
+}
+.count_dl dd button{
+    border: none;
+    outline: none;
+    height: 28px;
+    width: 21px;
+    background-color: #eee8e8;
+    color: #7d7c7c;
+    font-weight: 400;
+    font-size: 20px;
+}
+.confirm_submission{
+    width: 198px;
+    height: 46px;
+    outline-style: none;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 46px;
+    background: #f10180 url(../images/gouwudai_03.jpg) no-repeat;
+    background-position: 41px 13px;
+    box-sizing: border-box;
+    padding-left: 38px;
+    text-align: center;
+    margin-left: 40px;
+}
+.vip{
+    color: #999;
+    margin: 16px 0 0 40px;
+}
+.vip span{
+    color: #f62e99;
 }

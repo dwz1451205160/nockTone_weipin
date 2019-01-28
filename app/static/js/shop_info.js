@@ -30,6 +30,7 @@ var shopList = (function () {
                         //此时按钮不能点击
                         this.disabled = true;
                         this.style = "cursor:not-allowed";
+                        this.style.background = '#f9f8f8';
                         alert('本商品默认一件起售'); 
                     }
                     _this.data.count = count;
@@ -89,7 +90,12 @@ var shopList = (function () {
             <dl class="size">
                 <dt>尺码</dt>
                 <dd>${data.size}
-                    <div>
+                    <i class="fit"></i>
+                    <div class='select_size'>
+                        <div class="lingxing">
+                            <i>◆</i>
+                            <i>◆</i>
+                        </div>
                         <ul>
                             <li>规格：均码</li>
                             <li></li>
@@ -98,7 +104,7 @@ var shopList = (function () {
                 </dd>
             </dl>
 
-            <dl>
+            <dl class="count_dl">
                 <dt>数量</dt>
                 <dd>
                     <button style="cursor: pointer">-</button>
@@ -106,7 +112,10 @@ var shopList = (function () {
                     <button style="cursor: pointer">+</button>
                 </dd>
             </dl>
-            <button>加入购物车</button>
+            <button class="confirm_submission">
+            加入购物袋
+            </button>
+            <p class="vip">您是 <span>银卡</span> 会员，购买最多可获得  <span>27</span>  个唯品币</P>
             </div>
             `
             arr.push(str);
