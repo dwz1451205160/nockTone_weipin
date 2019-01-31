@@ -475,3 +475,135 @@
 .vip span{
     color: #f62e99;
 }
+/* 放大镜底部开始 */
+.fdj_bottom{
+    width: 1000px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+.fdj_bottom .fdj_bottom_left{
+    width: 420px;
+    height: 64px;
+    /* background: #999; */
+    box-sizing: border-box;
+    padding: 16px 0px;
+}
+.fdj_bottom .fdj_bottom_right{
+    width: 552px;
+    height: 64px;
+    /* background: pink; */
+    padding-top: 10px;
+    
+}
+.fdj_bottom_left ul{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.fdj_bottom_left ul li{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    width: 125px;
+    height: 18px;
+    border-right: 1px solid #e2e2e2;
+}
+.fdj_bottom_left ul li a {
+    color: #bcb7ba;
+    font-size: 14px;
+}
+.fdj_bottom_left ul li i{
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+.fdj_bottom_left ul li:nth-child(3){
+    border-right:0;
+}
+.fdj_bottom_left ul li:nth-child(1) i{
+    
+    background: url(../images/fdj_icon.png) no-repeat;
+    background-position: -360px -190px;
+}
+.fdj_bottom_left ul li:nth-child(2) i{
+    background: url(../images/fdj_icon.png) no-repeat;
+    background-position: -496px -190px;
+}
+.fdj_bottom_left ul li:nth-child(3) i{
+    background: url(../images/fdj_icon.png) no-repeat;
+    background-position: -326px -190px;
+}
+.fdj_bottom_right dl dt{
+    display: inline-block;
+    margin-right: 10px;
+    color: #999;
+}
+.fdj_bottom_right dl dd{
+    display: inline-block;
+    position: relative;
+    color: #666;
+}
+.fdj_bottom_right dl dd .xiao {
+    display:inline-block;
+    width: 8px;
+    height: 5px;
+    background: url(../images/fdj_icon4.png) no-repeat;
+    background-position: -43px -206px;
+    margin-bottom: 2px;
+}
+.fdj_bottom_right dl dd:hover .xiao{
+    background: url(../images/fdj_icon4.png) no-repeat;
+    background-position: -15px -205px;
+}
+
+.fdj_bottom_right dl dd .huanhuo_info{
+    position: absolute;
+    left: 156px;
+    top: 26px;
+    width: 346px;
+    height: 190px;
+    border: 1px solid #f8dbb1;
+    box-sizing: border-box;
+    background:#fffaf3;
+    padding: 6px 15px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all ease-out .15s;
+}
+
+.fdj_bottom_right dl dd:hover .huanhuo_info{
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 100;
+}
+.fdj_bottom_right dl dd .huanhuo_info .lingxing_bor{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 26px;
+    width: 346px;
+}
+.fdj_bottom_right dl dd .huanhuo_info .lingxing_bor i{
+    color: #f8dbb1;
+    width: 14px;  
+    height: 14px;
+    position: absolute;
+    left: 82px;
+    top: -10px;
+}
+.fdj_bottom_right dl dd .huanhuo_info .lingxing_bor i:nth-child(2){
+    position: absolute;
+    left: 82px;
+    top: -8px;
+    color: #fffaf3;
+}
+/* 放大镜完成 */
+/* 底部开始 */
+
+#hshs{
+    width: 100%;
+    height: 500px;
+    background: palegreen;
+}
