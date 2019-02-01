@@ -17,10 +17,11 @@ var shopList = (function () {
                      //把数量添加到数据中
                     var obj ={
                         count:1,
+                        time:Date.now(),
                         ..._this.data
                     }
                    _this.setData(obj);
-                  
+                  location.href = 'shop_car.html';
                     console.log('tijiao')
                 }
                 _this.buttonall[0].onclick = function () {
