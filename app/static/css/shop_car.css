@@ -1,0 +1,38 @@
+#header_wrapper{
+    height: 78px;
+    background: #ffffff;
+    border-bottom: 2px solid #f3168a;
+}
+.header{
+    height: 78px;
+    background: #ffffff;
+}
+.content{
+    width: 962px;
+    margin: 0 auto;
+}
+.shop_car_logo{
+    width: 194px;
+    height: 48px;
+    float: left;
+    margin-top: 16px;
+}
+.shop_car_logo a{
+    display: block;
+    width: 194px;
+    height: 48px;
+    background: url(../images/shop_caricon.png) no-repeat;
+    background-position: -288px 0px;
+    text-indent: -9999px;
+}
+.header_right{
+    float: right;
+    background: pink;
+    width: 585px;
+    height: 78px;
+    box-sizing: border-box;
+    padding-right: 16px; 
+}
+.header_right_top{
+    display: flex;
+}

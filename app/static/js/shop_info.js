@@ -21,6 +21,7 @@ var shopList = (function () {
                         ..._this.data
                     }
                    _this.setData(obj);
+                   //跳转到购物车页面
                   location.href = 'shop_car.html';
                     console.log('tijiao')
                 }
