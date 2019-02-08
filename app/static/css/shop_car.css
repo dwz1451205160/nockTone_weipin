@@ -27,7 +27,7 @@
 }
 .header_right{
     float: right;
-    background: pink;
+    /* background: pink; */
     width: 585px;
     height: 78px;
     box-sizing: border-box;
@@ -35,4 +35,149 @@
 }
 .header_right_top{
     display: flex;
+    padding-top: 10px;
 }
+.header_right_top .user_info{
+    /* width: 246px; */
+    height: 26px;
+}
+.user_info span {
+    color: grey;
+}
+.user_info span a:nth-child(1):hover{
+    color: #000000;
+}
+.user_info span a:nth-child(2){
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../images/fdj_icon3.png) no-repeat;
+    background-position: -62px -238px;
+    vertical-align: middle;
+    margin-right: 18px;
+}
+.user_info .quite{
+    margin-right: 18px;
+}
+.user_info .quite:hover{
+    color: #000000;
+}
+.user_info .order_management:hover{
+    color: #000000;
+}
+.header_right_top .vertical_bar{
+    margin: 0 13px;
+    color: #b3b3b3;
+}
+.phone_num{
+    color: #808080;
+}
+.phone_num i{
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background: url(../images/icon_phone.jpg) no-repeat;
+    vertical-align: middle;
+}
+.customer_service i{
+    display: inline-block;
+    width: 11px;
+    height: 14px;
+    background: url(../images/icon_kefu.jpg) no-repeat;
+    vertical-align: middle;
+}
+.customer_service a:hover{
+    color: #000000;
+}
+.members{
+    position: relative;
+}
+.members i {
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    background: url(../images/icon_huiyuan.jpg) no-repeat;
+    vertical-align: middle;
+}
+.members span{
+    display:inline-block;
+    width: 8px;
+    height: 5px;
+    background: url(../images/fdj_icon4.png) no-repeat;
+    background-position: -43px -206px;
+    margin-bottom: 2px;
+}
+
+.members:hover span{
+    background: url(../images/fdj_icon4.png) no-repeat;
+    background-position: -15px -205px;
+}
+.members .service_center{
+    display: none;
+    position: absolute;
+    padding: 8px 24px 0 12px;
+    width: 118px;
+    border: 1px solid #cbcaca;
+    border-radius: 0;
+    top: -9px;
+    left: -13px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 12px #a0a0a0;
+}
+.members .service_center ul li:nth-child(2){
+    text-align: right;
+    margin-right: 14px;
+    
+}
+.members .service_center ul li:nth-child(3){
+    text-align: right;
+    margin-right: 14px;
+    margin-top: 8px;
+}
+.members .service_center ul li:nth-child(4){
+    text-align: right;
+    margin: 8px 14px 4px 0px;
+}
+.members:hover .service_center{
+    display: block;
+    z-index: 1000;
+    background: #ffffff;
+    
+}
+.members:hover .service_center ul li:nth-child(1) a{
+    color: #000000;
+}
+.header_right .ensure{
+    margin-left: 169px;
+}
+.header_right .ensure li{
+    display: inline-block;
+}
+.header_right .ensure li:nth-child(1) i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/shop_caricon2.png) no-repeat;
+    background-position: -587px -145px;
+    vertical-align: middle;
+    margin-right: 17px;
+}
+.header_right .ensure li:nth-child(2) i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/shop_caricon2.png) no-repeat;
+    background-position: -432px -253px;
+    vertical-align: middle;
+    margin: 0 16px 0 25px;
+}
+.header_right .ensure li:nth-child(3) i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/shop_caricon2.png) no-repeat;
+    background-position: -587px -169px;
+    vertical-align: middle;
+    margin: 0 16px 0 25px;
+}
+/* 头部结束 */
