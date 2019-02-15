@@ -1,6 +1,6 @@
 
 <?php
-
+    header("Access-Control-Allow-Origin:*");
     header("Content-type:text/html; charset=UTF-8");
     $json = file_get_contents('php://input');
     $coon = new mysqli('localhost','root','','db_student_admin',3306);
