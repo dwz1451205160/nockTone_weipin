@@ -82,7 +82,119 @@
         </div>
     </div>
     <!-- 头部结束 -->
-    
+    <!-- 主题内容开始 -->
+    <div id="mainpart_wrapper">
+        <div class="mainpart content">
+            <div class="mainpart_top_wrapper">
+                <div class="mainpart_top">
+                    <div class="mainpart_top_left">
+
+                    </div>
+                    <div class="mainpart_top_right">
+                        <h3>逛超时了，以下商品已被清空！</h3>
+                        <p>赶紧一键抢回来~~
+                            <i class="question_icon"></i>
+                        </p>
+                        <button class="yijian_btn">一键加入购物袋</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mainpart_bottom">
+                <div class="temai_clock">
+                    <a href="#">
+                        特卖商品
+                        <span id="twenty_clock"></span>
+                    </a>
+                    <span class="shugang"></span>
+                    <a href="#">
+                        唯品医药
+                    </a>
+                </div>
+                <div class="insert_box">
+
+                </div>
+                <!-- <div class="peisong_address">
+                    <span>配送至 北京</span>
+                    <div style="display:inline-block">
+                        <p style="display:inline-block">请在倒计时结束前提交订单，下单后你另有 30 分钟的支付时间。</p>
+                        <span>此处是？</span>
+                    </div>
+                </div>
+                <div class="shopcar_table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>精选特卖</th>
+                                <th>单价</th>
+                                <th>数量</th>
+                                <th>小计</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    69
+                                </td>
+                                <td>
+                                    <button style="cursor: pointer">-</button>
+                                    <span>1</span>
+                                    <button style="cursor: pointer">+</button>
+                                </td>
+                                <td>4</td>
+                                <td>删除</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- 主题内容结束 -->
+
+    <script src="js/shop_car.js"></script>
+    <script>
+        shopCar.init();
+    </script>
+    <script src="js/twenty_clock.js"></script>
+    <script src="js/shop_park.js"></script>
+    <script>
+        var $shopPark = document.querySelector('.mainpart_top_wrapper');
+        var $clock = document.querySelector('#twenty_clock');
+        var $insertBox = document.querySelector('.insert_box')
+        var data = JSON.parse(localStorage.shopList);
+        if (data != []) {
+            getTwentyClock(data[data.length - 1].time, $clock)
+                // 倒计时结束
+                .then(str => {
+                    if (str == 'jieshu') {
+                        $insertBox.innerHTML = '';
+                        $shopPark.style.display = 'block';
+                        shopPark.init();
+                    }
+                })
+                //再次添加购物车
+                .then(_ => {
+                    
+                    var $yiJian = document.querySelector('.yijian_btn');
+                    $yiJian.onclick = function() {
+                        $insertBox.innerHTML = '';
+                        $shopPark.style.display = 'none';
+                        shopCar.insertData(JSON.parse(localStorage.shopList));
+                        getTwentyClock(data[data.length - 1].time, $clock);
+                        window.location.reload();
+                    }
+                })
+        }
+
+        console.log('888')
+    </script>
 </body>
 
 </html>
