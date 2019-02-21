@@ -467,4 +467,166 @@
     border-right: 1px solid #e0e0e0;
     cursor: pointer;
 }
+.shopcar_table_bottom{
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    height: 48px; 
+}
+.shopcar_table_bottom span{
+    width: 46px;
+    height: 20px;
+    background: #ff9933;
+    display: inline-block;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 10px;
+    border-radius: 2px;
+    margin: 14px 10px 0 15px;
+}
+.shopcar_table_bottom p{
+    display: inline-block;
+    color: #666;
+}
+.discount_box{
+    margin-top: 40px;
+}
+.discount_box_youhuijuan{
+    border: 1px solid #ecebeb;
+    height: 67px;
+    border-bottom: none;
+}
+.css_btn{
+    color: #f10180;
+    border: 1px solid #f10180;
+    list-style: none;
+    outline: none;
+    border-radius: 3px;
+    background-color: #fff;
+    width: 123px;
+    height: 30px;
+    margin: 15px 0 0 15px;
+    cursor: pointer;
+}
+.css_btn:hover{
+    background-color: #ecbed7;
+}
+.discount_box_zhedie{
+    height: 0px;
+    border: 1px solid #ecebeb;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    /* border-top: none; */
+    background: #f5f5f5;
+}
+.discount_box_zhedie_content{
+    width: 906px;
+    height: 158px;
+    background: #ffffff;
+    border: 1px solid #cccbcb;
+    margin: 25px 0 0 25px;
+    display: flex;
+    opacity: 0;
+}
+.discount_box_icon{
+    width: 88px;
+    height: 88px;
+    background: url(../images/shop_caricon.png) no-repeat;
+    background-position: -288px -52px;
+    margin: 35px 30px 0 150px;
+}
+.discount_box_right{
+    margin-top: 46px;
+    position: relative;
+}
+.discount_box_right p{
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+.discount_box_right input{
+    width: 220px;
+    height: 18px;
+    line-height: 18px;
+    padding: 6px 10px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+    border-right: 0;
+    outline: 0;
+}
+.discount_box_right input:hover{
+    border-color: #333;
+}
+.discount_box_right input:focus{
+    border-color: #333;
+}
+.discount_box_right span{
+    display: inline-block;
+    width: 114px;
+    height: 30px;
+    border: 1px solid #d0d0d0;
+    color: #999;
+    background: #d0d0d0;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 16px;
+    margin-left: -2px;
+    position: absolute;
+    right: -114px;
+    top: 37px;
+    transition: .3s;
+}
+.discount_box_right:hover span{
+    color: #e00078;
+    background-color: #fcedf2;
+    border: 1px solid #f10180;
+    cursor: pointer;
+}
+.discount_box_youhuikouling{
+    border-top:0;
+    border-bottom:0;
+}
+.discount_box_settlement{
+    height: 50px;
+    background-color: #f3f3f3;
+    border: 1px solid #e2e1e1;
+    display: flex;
+    justify-content: flex-end;
+    top: 610px;
+
+}
+.discount_box_settlement button{
+    width: 250px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+    background-color: #f10180;
+    border: 1px solid #f10180;
+    color: #ffffff;
+    font-size: 18px;
+}
+.discount_box_settlement span{
+    line-height: 50px;
+}
+.discount_box_settlement i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/question_icon.jpg) no-repeat;
+    margin: 17px 10px 0 10px;
+}
+.xx{
+    height: 500px;
+    
+    background: pink;
+}
 /* 购物车主题内容结束 */

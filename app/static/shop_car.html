@@ -115,6 +115,28 @@
                 <div class="insert_box">
 
                 </div>
+                <div class="shopcar_table">
+                    <table cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th class="selected_sale">精选特卖</th>
+                                <th>单价</th>
+                                <th>数量</th>
+                                <th class="subtotal">小计</th>
+                                <th class="operation">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+
+                    <div class="shopcar_table_bottom">
+                        <span>运费</span>
+                        <p>唯品自营：唯品自营商品已免运费</p>
+                    </div>
+                </div>
+
                 <!-- <div class="peisong_address">
                     <span>配送至 北京</span>
                     <div style="display:inline-block">
@@ -150,24 +172,69 @@
                         </tbody>
                     </table>
                 </div> -->
-
-
-
             </div>
+
+            
+            <div class="discount_box">
+                <div class="discount_box_youhuijuan">
+                    <button id="favourable" class="css_btn">使用优惠券</button>
+                </div>
+                <div class="discount_box_zhedie">
+                    <div class="discount_box_zhedie_content">
+                        <div class="discount_box_icon"></div>
+                        <div class="discount_box_right">
+                            <p>没有可使用的优惠券，激活新优惠券</p>
+                            <input type="text" name="" id="" placeholder="请输入激活码">
+                            <span>激活并使用</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="discount_box_youhuikouling discount_box_youhuijuan">
+                    <button class="css_btn">使用优惠口令</button>
+                </div>
+                <div class="discount_box_settlement">
+                    <span>请在倒计时结束前结算</span>
+                    <i></i>
+                    <button>立即结算</button>
+                </div>
+            </div>
+
+            <div class="xx"></div>
+
         </div>
     </div>
     <!-- 主题内容结束 -->
 
-    <script src="js/shop_car.js"></script>
+
+    <!-- 需要引入的js部分 -->
+   
+    <!-- 配送地址和表格渲染js部分 -->
+    <script src="js/shopcar_address.js"></script>
     <script>
-        shopCar.init();
+        getAddress.init();
     </script>
+     <!-- 购物车数据渲染/增删js部分 -->
+     <script src="js/shop_car.js"></script>
+     <script>
+         shopCar.init();
+     </script>
+     <!-- 控制优惠券部分 -->
+     <script src="js/shopcar_coupon.js"></script>
+     <script>
+         shopCoupon.init()
+     </script>
+    <!-- 倒计时控制页面部分 -->
     <script src="js/twenty_clock.js"></script>
     <script src="js/shop_park.js"></script>
     <script>
+        var $discountBox =document.querySelector('.discount_box')
+        var $subtotal = document.querySelector('.subtotal');
+        var $selectedSale = document.querySelector('.selected_sale');
         var $shopPark = document.querySelector('.mainpart_top_wrapper');
         var $clock = document.querySelector('#twenty_clock');
-        var $insertBox = document.querySelector('.insert_box')
+        var $insertBox = document.querySelector('.insert_box');
+        var $shopCarTbody = document.querySelector('tbody');
+        var $operation = document.querySelector('.operation');
         var data = JSON.parse(localStorage.shopList);
         if (data != []) {
             getTwentyClock(data[data.length - 1].time, $clock)
@@ -175,7 +242,12 @@
                 .then(str => {
                     if (str == 'jieshu') {
                         $insertBox.innerHTML = '';
+                        $shopCarTbody.innerHTML = '';
+                        $discountBox.innerHTML = '';
                         $shopPark.style.display = 'block';
+                        $operation.style.display = 'none';
+                        $subtotal.style.borderRight = '1px solid #e0e0e0';
+                        $selectedSale.style.width = '600px';
                         shopPark.init();
                     }
                 })
@@ -188,6 +260,8 @@
                         $shopPark.style.display = 'none';
                         shopCar.insertData(JSON.parse(localStorage.shopList));
                         getTwentyClock(data[data.length - 1].time, $clock);
+                        getAddress.init();
+                        $operation.style.display = 'block';
                         window.location.reload();
                     }
                 })
