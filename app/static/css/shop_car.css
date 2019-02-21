@@ -624,9 +624,16 @@
     background: url(../images/question_icon.jpg) no-repeat;
     margin: 17px 10px 0 10px;
 }
-.xx{
-    height: 500px;
-    
-    background: pink;
-}
 /* 购物车主题内容结束 */
+/* 底部开始 */
+#footer_wrapper{
+    height: 193px;
+    border-top:1px solid #ebebeb; 
+    background: #fcfcfc;
+}
+.footer{
+    height: 193px;
+    width: 960px;
+    background: url(../images/footer.jpg);
+}
+/* 底部结束 */

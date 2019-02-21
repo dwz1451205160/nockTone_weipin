@@ -2,7 +2,7 @@ function getTwentyClock(targetDate, ele) {
     var nowDate = targetDate;
     var str = 'start';
     //目标日期字符串到格林尼治时间的毫秒数
-    targetDate = targetDate + 20000;
+    targetDate = targetDate + 10000;
     return new Promise((resolve, reject) => {
         var timer = setInterval(_ => {
             //当前时间到格林尼治时间的毫秒数

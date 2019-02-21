@@ -199,11 +199,14 @@
                 </div>
             </div>
 
-            <div class="xx"></div>
+            <div id="footer_wrapper">
+                <div class="footer content"></div>
+            </div>
 
         </div>
     </div>
     <!-- 主题内容结束 -->
+
 
 
     <!-- 需要引入的js部分 -->
@@ -235,8 +238,10 @@
         var $insertBox = document.querySelector('.insert_box');
         var $shopCarTbody = document.querySelector('tbody');
         var $operation = document.querySelector('.operation');
+        var $footerBox = document.querySelector('#footer_wrapper');
         var data = JSON.parse(localStorage.shopList);
         if (data != []) {
+            // $footerBox.style.marginTop = '500px';
             getTwentyClock(data[data.length - 1].time, $clock)
                 // 倒计时结束
                 .then(str => {
@@ -249,6 +254,7 @@
                         $subtotal.style.borderRight = '1px solid #e0e0e0';
                         $selectedSale.style.width = '600px';
                         shopPark.init();
+                        $footerBox.style.marginTop = '0px';
                     }
                 })
                 //再次添加购物车

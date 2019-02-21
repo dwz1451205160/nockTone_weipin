@@ -168,6 +168,9 @@ var shopCarClear = (function () {
                     </button>
                 </div>
             </div>
+            <div id="footer_wrapper">
+                <div class="footer content"></div>
+            </div>
             `
             $arr.push(str);
             $mainpartBox.innerHTML = $arr.join('');
